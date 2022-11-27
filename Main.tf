@@ -10,7 +10,7 @@ terraform {
   cloud {
     organization = "emmafoxorg"
     workspaces {
-      name = "emmaapi"
+      name = "emmapi"
     }
   }
 }
