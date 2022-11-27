@@ -8,7 +8,7 @@ terraform {
   }
   #
   cloud {
-    organization = "emmfoxorg"
+    organization = "emmafoxorg"
     workspaces {
       name = "emmaapi"
     }
