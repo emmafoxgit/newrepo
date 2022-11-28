@@ -41,7 +41,7 @@ resource "azurerm_resource_group" "demo" {
 
 ##  Demo now
 resource "azurerm_storage_account" "StorageAccountDemo" {
-  name                     = "satestssssssssssssant000012"
+  name                     = "satestsssant000012"
   resource_group_name      = azurerm_resource_group.demo.name
   location                 = azurerm_resource_group.demo.location
   account_tier             = "Standard"
