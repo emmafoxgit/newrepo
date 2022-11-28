@@ -34,7 +34,7 @@ resource "azurerm_virtual_network" "example" {
   address_space       = ["10.0.0.0/16"]
 }
 
-resource "azurerm_resource_group" "example" {
+resource "azurerm_resource_group" "mondayexample" {
   name     = "tfzexampleresources"
   location = "West Europe"
 }
