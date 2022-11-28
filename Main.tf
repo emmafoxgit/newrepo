@@ -39,21 +39,13 @@ resource "azurerm_subnet" "example" {
   resource_group_name  = azurerm_resource_group.example.name
   virtual_network_name = azurerm_virtual_network.example.name
   address_prefixes     = ["10.0.1.0/24"]
-}
 
-resource "azurerm_resource_group" "mondayexample" {
-  name     = "tfzexampleresources"
-  location = "West Europe"
-}
+  delegation {
+    name = "delegation"
 
-resource "azurerm_storage_account" "example" {
-  name                     = "tftftfcountname"
-  resource_group_name      = azurerm_resource_group.example.name
-  location                 = azurerm_resource_group.example.location
-  account_tier             = "Standard"
-  account_replication_type = "GRS"
-
-  tags = {
-    environment = "staging"
+    service_delegation {
+      name    = "Microsoft.ContainerInstance/containerGroups"
+      actions = ["Microsoft.Network/virtualNetworks/subnets/join/action", "Microsoft.Network/virtualNetworks/subnets/prepareNetworkPolicies/action"]
+    }
   }
 }
