@@ -22,7 +22,7 @@ provider "azurerm" {
 
 # Create a resource group
 resource "azurerm_resource_group" "example11" {
-  name     = "example-resources"
+  name     = "zzerexample-resources"
   location = "West Europe"
 }
 
@@ -34,7 +34,7 @@ resource "azurerm_resource_group" "example" {
 }
 
 resource "azurerm_storage_account" "example" {
-  name                     = "functionsapptestsa"
+  name                     = "zzafunctionsapptestsa"
   resource_group_name      = azurerm_resource_group.example.name
   location                 = azurerm_resource_group.example.location
   account_tier             = "Standard"
