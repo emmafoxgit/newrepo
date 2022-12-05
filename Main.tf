@@ -62,7 +62,7 @@ resource "azurerm_function_app" "example" {
 }
 
 
-Example Usage
+
 resource "azurerm_resource_group" "example" {
   name     = "wwertexample-resource-group"
   location = "West Europe"
