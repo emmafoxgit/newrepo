@@ -63,7 +63,7 @@ resource "azurerm_function_app" "example" {
 
 
 
-resource "azurerm_resource_group" "example" {
+resource "azurerm_resource_group" "qqexample" {
   name     = "wwertexample-resource-group"
   location = "West Europe"
 }
@@ -75,8 +75,8 @@ resource "random_integer" "ri" {
 
 resource "azurerm_cosmosdb_account" "db" {
   name                = "tfex-cosmos-db-${random_integer.ri.result}"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.qqexample.location
+  resource_group_name = azurerm_resource_group.qqexample.name
   offer_type          = "Standard"
   kind                = "MongoDB"
 
